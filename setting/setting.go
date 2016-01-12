@@ -44,26 +44,26 @@ var (
 // object storage driver config parameters
 // TBD: It should be considered to refine the universal config parameters
 var (
-	Endpoint string
-	Bucket   string
+	Endpoint		string
+	Bucket			string
 
 	//qiniu aliyun qcloud share
-	AccessKeyID     string
-	AccessKeysecret string
+	AccessKeyID		string
+	AccessKeysecret		string
 
 	//upyun unique
 	User   string
 	Passwd string
 
 	//qcloud unique
-	QcloudAccessID string
+	QcloudAccessID		string
 
 	//googlecloud unique
-	Projectid          string
-	Scope              string
-	PrivateKeyFilePath string
-	PrivateKeyFile     string
-	Clientemail        string
+	Projectid		string
+	Scope			string
+	PrivateKeyFilePath	string
+	PrivateKeyFile		string
+	Clientemail		string
 )
 
 // Clair service config parameters
