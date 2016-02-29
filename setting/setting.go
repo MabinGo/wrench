@@ -61,6 +61,9 @@ var (
 	//qcloud unique
 	QcloudAccessID string
 
+	//amazons3 unique
+	Region string
+
 	//googlecloud unique
 	Projectid          string
 	Scope              string
@@ -227,6 +230,12 @@ func SetConfig(path string) error {
 	switch BackendDriver {
 	case "":
 	case "qiniu", "aliyun", "amazons3":
+		if region := conf.String(BackendDriver + "::" + "region"); region != "" {
+			Region = region
+		} else {
+			err = fmt.Errorf("Region value is null")
+		}
+
 		if endpoint := conf.String(BackendDriver + "::" + "endpoint"); endpoint != "" {
 			Endpoint = endpoint
 		} else {
